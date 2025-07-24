@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abdullah Shaikh | Portfolio</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Tailwind + Fonts -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <!-- Style -->
+  <style>
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+
+<body class="bg-gray-950 text-white opacity-0 transition-opacity duration-1000">
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.remove('opacity-0');
+  });
+</script>
+
+<!-- Navbar -->
+<nav class="bg-gray-900 text-white fixed top-0 left-0 w-full z-50 shadow-md">
+  <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+    <div class="text-indigo-400 font-bold text-xl">Abdullah</div>
+    <ul class="space-x-6 hidden sm:flex">
+      <li><a href="#about" class="hover:text-indigo-400 transition">About</a></li>
+      <li><a href="#experience" class="hover:text-indigo-400 transition">Experience</a></li>
+      <li><a href="#skills" class="hover:text-indigo-400 transition">Skills</a></li>
+      <li><a href="#projects" class="hover:text-indigo-400 transition">Projects</a></li>
+      <li><a href="#contact" class="hover:text-indigo-400 transition">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Hero -->
+<header id="home" class="relative overflow-hidden text-center py-36 px-6 sm:px-10 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+  <div class="relative z-10 max-w-3xl mx-auto">
+    <h1 class="text-5xl sm:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-500 mb-6 tracking-tight leading-tight">
+      Abdullah Shaikh
+    </h1>
+    <p class="text-2xl sm:text-3xl text-gray-200 font-semibold mb-4">
+      AI Engineer · Data Scientist · Code Whisperer
+    </p>
+    <p class="text-lg sm:text-xl text-gray-400 font-light mb-4">
+      Building smarter apps, one model at a time.
+    </p>
+    <p class="text-base sm:text-lg text-gray-500 italic mb-10">
+      Turning data into decisions — and AI into delightful experiences.
+    </p>
+  </div>
+</header>
+
+<!-- About Section -->
+<section id="about" class="py-24 px-6 sm:px-10 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+  <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center gap-10">
+    <div class="w-52 h-52 rounded-full overflow-hidden border-4 border-indigo-500 shadow-xl hover:scale-105 transition duration-300">
+      <img src="{{ url_for('static', filename='images/profile.jpeg') }}" alt="Profile Photo" class="w-full h-full object-cover" />
+    </div>
+    <div class="max-w-2xl text-center sm:text-left">
+      <h2 class="text-4xl font-extrabold text-indigo-300 mb-4 tracking-tight">About Me</h2>
+      <p class="text-gray-300 text-lg leading-relaxed mb-6">
+      A builder, breaker, and lifelong learner. Currently exploring AI, Data Science, and turning wild ideas into delightful tech. Whether it’s writing ML models or crafting intuitive UIs, I believe great products come from curiosity and iteration.
+      </p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-indigo-100">
+        <div class="flex items-center gap-2"><i class="fas fa-map-marker-alt text-indigo-400"></i> Mumbai, India</div>
+        <div class="flex items-center gap-2"><i class="fas fa-robot text-indigo-400"></i> ML · NLP · AI</div>
+        <div class="flex items-center gap-2"><i class="fas fa-tools text-indigo-400"></i> Currently: AI Tools Builder</div>
+        <div class="flex items-center gap-2"><i class="fas fa-mug-hot text-indigo-400"></i> Fuel: Caffeine & Curiosity</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Experience Section -->
+<section id="experience" class="py-24 px-6 sm:px-10 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+  <h2 class="text-3xl font-bold text-indigo-300 text-center mb-12">Experience</h2>
+  <div class="max-w-4xl mx-auto space-y-10">
+    <div class="bg-gray-800 border border-gray-700 rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <h3 class="text-xl sm:text-2xl font-semibold text-white">
+            AI Intern <span class="text-indigo-400">@ LixtaNetwork</span>
+          </h3>
+          <p class="text-gray-400 text-sm mt-1">Remote | Feb 2025 – Present</p>
+        </div>
+      </div>
+      <p class="text-gray-300 mt-4 italic">Blending AI with Flutter.</p>
+      <ul class="list-disc list-inside text-gray-300 space-y-2 text-sm sm:text-base mt-4">
+        <li>Integrated AI models seamlessly into mobile apps for real-time automation.</li>
+        <li>Built MVPs with Flutter that were fast, functional, and fancy.</li>
+        <li>Teamed up with designers to ship beautiful & usable interfaces.</li>
+        <li>Crafted a document summarizer with Langchain & Flan-T5 (no OpenAI reliance, thank you 😌).</li>
+        <li>Built a roadmap generator to help students not get lost in the code jungle.</li>
+      </ul>
+      <div class="mt-6 flex flex-wrap gap-2 text-sm text-gray-200">
+        <span class="bg-gray-700 px-3 py-1 rounded-full">Flutter</span>
+        <span class="bg-gray-700 px-3 py-1 rounded-full">Langchain</span>
+        <span class="bg-gray-700 px-3 py-1 rounded-full">Streamlit</span>
+        <span class="bg-gray-700 px-3 py-1 rounded-full">Supabase</span>
+        <span class="bg-gray-700 px-3 py-1 rounded-full">MongoDB</span>
+        <span class="bg-gray-700 px-3 py-1 rounded-full">MySQL</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills" class="bg-gray-800 py-20 px-4 sm:px-10">
+  <h2 class="text-3xl font-bold text-indigo-300 text-center mb-10" data-aos="fade-up">Skills</h2>
+
+  <div class="flex flex-wrap justify-center gap-4 text-white text-center" data-aos="fade-up" data-aos-delay="200">
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      Python
+    </span>
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      SQL
+    </span>
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      Git & GitHub
+    </span>
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      Pandas
+    </span>
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      NumPy
+    </span>
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      Matplotlib
+    </span>
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      scikit-learn
+    </span>
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      NLP
+    </span>
+    <span class="bg-gray-900 px-5 py-2.5 rounded-full shadow-md transition-transform duration-300 hover:scale-105 hover:bg-indigo-600">
+      Streamlit
+    </span>
+  </div>
+</section>
+
+
+
+<!-- Projects -->
+<section id="projects" class="py-24 px-6 sm:px-10 bg-gradient-to-br from-gray-900 via-gray-950 to-black">
+  <h2 class="text-3xl font-bold text-indigo-300 text-center mb-12" data-aos="fade-up">Projects</h2>
+
+  <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+
+    <!-- Project Card -->
+    <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300" data-aos="zoom-in">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-xl font-bold text-white">Sentiment Analyzer</h3>
+        <a href="https://github.com/your-username/sentiment-analyzer" target="_blank" class="text-indigo-400 hover:text-indigo-600 transition">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+      </div>
+      <p class="text-gray-400">Analyzed Amazon product reviews using NLP techniques and visualized the sentiment results.</p>
+    </div>
+
+    <!-- Project Card -->
+    <div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300" data-aos="zoom-in" data-aos-delay="100">
+      <div class="flex items-center justify-between mb-3">
+        <h3 class="text-xl font-bold text-white">AI Roadmap Generator</h3>
+        <a href="https://github.com/your-username/ai-roadmap-generator" target="_blank" class="text-indigo-400 hover:text-indigo-600 transition">
+          <i class="fab fa-github fa-lg"></i>
+        </a>
+      </div>
+      <p class="text-gray-400">Developed an AI-powered tool that dynamically generates personalized coding roadmaps based on goals.</p>
+    </div>
+
+    <!-- You can add more projects below in the same format -->
+<div class="bg-gray-900 p-6 rounded-xl shadow-lg hover:scale-105 transition duration-300" data-aos="zoom-in" data-aos-delay="200">
+  <div class="flex items-center justify-between mb-3">
+    <h3 class="text-xl font-bold text-white">Quick Dummy</h3>
+    <a href="https://github.com/" target="_blank" class="text-indigo-400 hover:text-indigo-600 transition">
+      <i class="fab fa-github fa-lg"></i>
+    </a>
+  </div>
+  <p class="text-gray-400">A placeholder to test layout consistency and animation rendering.</p>
+</div>
+
+  </div>
+</section>
+
+
+<!-- Contact -->
+<section id="contact" class="bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 py-24 px-4 sm:px-10">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-4xl sm:text-5xl font-extrabold text-indigo-300 mb-6">Get in Touch</h2>
+    <p class="text-gray-400 text-lg sm:text-xl mb-12">
+      Whether it's building, brainstorming, or just banter, I'm always up for it.
+    </p>
+    <div class="bg-gray-900/50 backdrop-blur-md rounded-xl py-10 px-6 shadow-lg border border-gray-800">
+      <h3 class="text-2xl font-semibold text-white mb-6">Connect with me</h3>
+      <div class="flex justify-center gap-10 sm:gap-12">
+        <a href="https://github.com/Abdullah-Shaikh45" target="_blank" class="text-white text-3xl hover:text-indigo-400 hover:scale-125 transition-transform">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/abdulllah-shaikh-3165b5309" target="_blank" class="text-white text-3xl hover:text-indigo-400 hover:scale-125 transition-transform">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/AbdullahSh53393" target="_blank" class="text-white text-3xl hover:text-indigo-400 hover:scale-125 transition-transform">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-6 text-gray-500 text-sm bg-gray-900">
+  &copy; 2025 Abdullah Shaikh. All rights reserved.
+</footer>
+
+<!-- GSAP Scroll Animations -->
+<script>
+  gsap.utils.toArray("section").forEach((section) => {
+    gsap.from(section, {
+      opacity: 0,
+      y: 50,
+      duration: 1,
+      scrollTrigger: {
+        trigger: section,
+        start: "top 85%",
+      },
+    });
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>

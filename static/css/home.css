@@ -1,0 +1,4 @@
+.project-card:hover {
+  background: linear-gradient(135deg, #4f46e5 0%, #9333ea 100%);
+  color: white;
+}
