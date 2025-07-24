@@ -60,3 +60,7 @@
   animation: typewriter 4s steps(40, end), blink 0.75s step-end infinite;
   display: inline-block;
 }
+
+.glow-text {
+  animation: glow 3s ease-in-out infinite;
+}
